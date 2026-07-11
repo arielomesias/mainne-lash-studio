@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/*
+ * PASO 0 — tokens de docs/design-system.md.
+ * Ningun componente define color ni tipografia fuera de aqui.
+ *
+ * Regla de proporcion: el olivo es ACENTO. El 80-90% de la superficie visual
+ * debe ser beige / blanco / crema.
+ */
+@theme {
+  --color-bg: #fefcf9;
+  --color-cream: #f5ede3;
+  --color-beige: #e8dcc8;
+  --color-olive: #6b7248;
+  --color-olive-dark: #4a5033;
+  --color-ink: #2e2a24;
+  --color-muted: #7a7266;
+
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    /* Contenido informacional largo (blog): line-height comodo. */
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  /* Borde de foco visible en olivo — accesibilidad, y coherente con el token. */
+  :focus-visible {
+    outline: 2px solid var(--color-olive);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/*
+ * Animaciones (docs/design-system.md: sutil y con proposito).
+ *
+ * El estado oculto inicial vive SOLO bajo `.reveal-ready`, una clase que un
+ * script inline en <body> añade a <html> antes del primer paint. Sin JS la
+ * clase nunca aparece y todo queda visible desde el HTML — el contenido no
+ * depende de JS para existir (CLAUDE.md).
+ */
+@layer components {
+  /* Scroll reveal: <Reveal> añade data-revealed al entrar en viewport. */
+  .reveal-ready [data-reveal] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+    will-change: opacity, transform;
+  }
+  .reveal-ready [data-reveal][data-revealed] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Entrada del hero al cargar: escalona los hijos directos de [data-hero]. */
+  .reveal-ready [data-hero] > * {
+    opacity: 0;
+    animation: hero-in 0.7s ease forwards;
+  }
+  .reveal-ready [data-hero] > *:nth-child(1) { animation-delay: 0.05s; }
+  .reveal-ready [data-hero] > *:nth-child(2) { animation-delay: 0.15s; }
+  .reveal-ready [data-hero] > *:nth-child(3) { animation-delay: 0.25s; }
+  .reveal-ready [data-hero] > *:nth-child(4) { animation-delay: 0.35s; }
+
+  @keyframes hero-in {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /*
+   * reduce-motion gana: el contenido salta a su estado final (visible), nunca
+   * se queda oculto. `revert` deja la propiedad como si la regla no existiera.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-ready [data-reveal],
+    .reveal-ready [data-hero] > * {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+}
