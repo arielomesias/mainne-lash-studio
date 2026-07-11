@@ -29,12 +29,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # configure-pages con enablement:true habilita GitHub Pages por API si aun
-      # no lo esta, asi no hace falta tocar Settings manualmente.
+      # Requiere que GitHub Pages este activado con Source = "GitHub Actions"
+      # (Settings -> Pages). Es un ajuste de admin del repo, de una sola vez.
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Build static export
         env:
