@@ -4,6 +4,9 @@ import { BLOG_POSTS } from "@/data/blog";
 import { CITIES } from "@/data/cities";
 import { SERVICES } from "@/data/pricing";
 
+// Necesario para `output: export` (GitHub Pages): fuerza el prerender estatico.
+export const dynamic = "force-static";
+
 /** Cada pagina nueva se añade aqui al construirse — nunca una URL que da 404. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
