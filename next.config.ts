@@ -9,6 +9,7 @@ import type { NextConfig } from "next";
  */
 const isPages = process.env.GITHUB_PAGES === "true";
 const repo = "mainne-lash-studio";
+const basePath = isPages ? `/${repo}` : "";
 
 const nextConfig: NextConfig = {
   // Las URLs de docs/seo-strategy.md terminan en "/" y son definitivas desde el
@@ -16,11 +17,16 @@ const nextConfig: NextConfig = {
   // /about/ como URLs distintas.
   trailingSlash: true,
 
+  // Expuesto a los componentes (ver lib/asset.ts) para prefijar rutas de
+  // /public en next/image: con `unoptimized` Next NO aplica el basePath solo,
+  // asi que hay que anteponerlo a mano. Vacio fuera de GitHub Pages.
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
+
   ...(isPages
     ? {
         output: "export" as const,
-        basePath: `/${repo}`,
-        assetPrefix: `/${repo}/`,
+        basePath,
+        assetPrefix: `${basePath}/`,
       }
     : {}),
 

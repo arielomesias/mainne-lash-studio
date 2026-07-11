@@ -5,6 +5,7 @@ import { ProvisionalPricingNotice } from "@/components/ProvisionalPricingNotice"
 import { FoxtailDivider } from "@/components/ui/FoxtailDivider";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SERVICES, type ServicePricing } from "@/data/pricing";
+import { asset } from "@/lib/asset";
 
 /**
  * "Our Eyelash Services and Prices" — lista desplegable de sets.
@@ -144,7 +145,7 @@ function ServiceImage({ service }: { service: ServicePricing }) {
   if (service.image) {
     return (
       <Image
-        src={service.image.src}
+        src={asset(service.image.src)}
         alt={service.image.alt}
         width={480}
         height={360}

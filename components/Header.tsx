@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SiteNav } from "@/components/SiteNav";
 import { Container } from "@/components/ui/Container";
 import { BUSINESS_NAME } from "@/data/business";
+import { asset } from "@/lib/asset";
 
 /**
  * Header sticky con el menu principal. SiteNav (client) trae los enlaces de
@@ -25,7 +26,7 @@ export function Header() {
           className="inline-flex items-center gap-2.5 sm:gap-3"
         >
           <Image
-            src="/logo-header.png"
+            src={asset("/logo-header.png")}
             alt=""
             width={539}
             height={249}
