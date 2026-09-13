@@ -10,7 +10,7 @@ const compat = new FlatCompat({ baseDirectory: __dirname });
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   // next-env.d.ts lo genera Next en cada build y usa triple-slash references.
-  { ignores: [".next/**", "node_modules/**", "next-env.d.ts"] },
+  { ignores: [".next/**", "out/**", "node_modules/**", "next-env.d.ts"] },
 ];
 
 export default eslintConfig;

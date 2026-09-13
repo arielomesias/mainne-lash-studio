@@ -24,8 +24,8 @@ export function WhyLougheed() {
             This one sits a short walk from Lougheed SkyTrain, on the line
             between Burnaby and Coquitlam. That was deliberate. It is the point
             where the Millennium and Expo lines put Burnaby, Coquitlam and New
-            Westminster all within a straightforward ride, so a two-hour
-            appointment does not turn into a four-hour errand.
+            Westminster all within a straightforward ride, so a lash
+            appointment does not become an all-day errand.
           </p>
           <p>
             The exact address goes out once your appointment is confirmed. It is

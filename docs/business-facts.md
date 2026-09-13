@@ -6,22 +6,26 @@ Claude Code debe leer este archivo antes de escribir cualquier copy que mencione
 
 - **Nombre del negocio:** Mainne Lash Studio
 - **Dominio:** mainnelashstudio.com
-- **Servicio:** únicamente extensiones de pestañas (Classic, Hybrid, Volume, Mega Volume). **No** lash lift, **no** brow lamination, **no** training.
+- **Servicio actual:** extensiones de pestañas Classic, Hybrid, texturizadas/Wispy, Volume y Mega Volume, incluidos los estilos del catálogo visual en `data/catalog.ts`. **No** lash lift, **no** brow lamination, **no** training.
 - **Modelo:** estudio privado en el hogar de la artista (aún sin salón físico / storefront público).
 - **Ubicación de referencia (no confirmada para uso público todavía):** frente a la estación SkyTrain de Lougheed (límite Burnaby / Coquitlam). Usar como argumento de conveniencia/acceso en copy ("steps from Lougheed SkyTrain"), **no publicar la dirección exacta** en ninguna página (ver nota GBP más abajo).
 - **Teléfono:** `+1 (778) 318-4103` — ⚠️ **solo mensajes de texto (SMS). No llamadas.**
   Por eso el sitio enlaza con `sms:+17783184103`, **nunca** con `tel:`: en móvil un `tel:` abre el marcador y provoca exactamente la llamada que Mainne no quiere recibir.
 - **Email:** `info@mainnelashstudio.com`
-- **Instagram / redes:** `[CONFIRMAR]`
+- **Instagram / redes:** `https://www.instagram.com/mainne.ls/`
+- **Sistema LED:** Beam Light Arctica, luz blanca de 405 nm. Nunca describir como "UV-free" ni afirmar que elimina el riesgo de alergia.
 
 ## Modelo de reserva y pago
 
-**No hay reservas ni pago online.** No se usa Square, Fresha ni ninguna plataforma externa. El flujo es:
+Las reservas se harán con **Google Workspace Appointment Schedules**. La web realiza primero un control de elegibilidad y luego abre o embebe el calendario. El flujo es:
 
-1. La clienta contacta primero, por SMS o email.
-2. Se acuerda el set y la fecha por mensaje.
-3. Mainne confirma la cita y envía la dirección exacta.
-4. **El pago es por Interac e-Transfer.** Los datos de transferencia se envían al confirmar la cita — **nunca se publican en el sitio**.
+1. La clienta confirma que cumple los criterios de elegibilidad LED. No guardar diagnósticos o medicamentos concretos.
+2. Elige servicio y hora en Google Calendar. Horario: lunes a viernes, 9:30 a 16:00.
+3. Google envía sus correos estándar a clienta y artista.
+4. La cita queda pendiente de un depósito de CA$50 por Interac e-Transfer dentro de 12 horas.
+5. Mainne confirma la cita y envía la dirección exacta.
+
+La cuenta organizadora es `info@mainnelashstudio.com`. El enlace público de Appointment Schedule todavía está pendiente.
 
 Formato NAP canónico del teléfono, idéntico en todas partes: `+1 (778) 318-4103`.
 
@@ -36,13 +40,13 @@ Estos datos alimentan `data/credentials.ts`. Mientras estén sin confirmar, las 
 
 Hasta entonces, **la palabra "certified" no aparece en ninguna página, meta, ni schema del sitio.**
 
-## Políticas de reserva — ⚠️ SIN CONFIRMAR
+## Políticas de reserva — confirmadas para la primera iteración
 
-A diferencia de un precio provisional, una política es un compromiso comercial que una clienta puede exigir. No publicar hasta confirmar.
-
-- **Depósito:** `[CONFIRMAR: monto, si es reembolsable]`
-- **Cancelación:** `[CONFIRMAR: aviso mínimo, penalización]`
-- **Política de retrasos / no-show:** `[CONFIRMAR]`
+- **Depósito:** CA$50 por Interac e-Transfer, aplicado al saldo. Debe recibirse dentro de 12 horas o el horario puede liberarse.
+- **Cancelación / cambio:** aviso mínimo de 48 horas. Con aviso suficiente, el depósito se puede transferir una vez. Con menos de 48 horas o no-show, se pierde y se exige uno nuevo.
+- **Retrasos:** más de 15 minutos puede acortar el set o cancelar la cita para no afectar a la siguiente clienta; se pierde el depósito si hay cancelación tardía.
+- **Cancelación por Mainne:** reembolso completo o transferencia a otra fecha.
+- **Embarazo y lactancia:** Mainne no ofrece el servicio LED durante embarazo ni lactancia, por máxima precaución.
 
 ## Áreas de servicio (para `areaServed` en schema y para copy)
 

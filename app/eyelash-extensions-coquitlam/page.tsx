@@ -96,8 +96,8 @@ export default function CoquitlamPage() {
               Burquitlam is a single stop away on the Millennium Line. From
               Coquitlam Central and Lincoln it is a handful more. The Evergreen
               extension made this trip unremarkable — it is the kind of distance
-              you cover without thinking about it, which matters when the
-              appointment itself runs to two or three hours.
+              you cover without thinking about it, which makes a calm lash
+              appointment feel much easier to fit into your day.
             </p>
           </div>
         </div>

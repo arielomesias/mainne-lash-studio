@@ -18,8 +18,8 @@ import { asset } from "@/lib/asset";
  */
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-beige/70 bg-bg/90 backdrop-blur-sm">
-      <Container className="flex items-center justify-between gap-4 py-3 sm:py-4">
+    <header className="sticky top-0 z-40 border-b border-beige/55 bg-bg/82 backdrop-blur-xl">
+      <Container className="flex items-center justify-between gap-4 py-3">
         <Link
           href="/"
           aria-label={`${BUSINESS_NAME} — home`}
@@ -33,7 +33,7 @@ export function Header() {
             priority
             className="h-7 w-auto sm:h-8"
           />
-          <span className="hidden font-serif leading-tight text-ink sm:inline sm:text-xl">
+          <span className="hidden font-serif text-lg leading-tight tracking-[-.02em] text-ink sm:inline">
             {BUSINESS_NAME}
           </span>
         </Link>

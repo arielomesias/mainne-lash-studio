@@ -21,6 +21,11 @@ export type Faq = {
 
 export const HOME_FAQS: Faq[] = [
   {
+    question: "What is a white LED lash extension service?",
+    answer:
+      "Mainne uses the Beam Light Arctica system to cure each adhesive bond with controlled 405 nm white LED light as the extension is placed. The light does not make lash adhesive allergy-free: the professional adhesive still contains cyanoacrylate, so eligibility screening, closed eyes and the provided protection remain essential.",
+  },
+  {
     question: "How long do eyelash extensions last?",
     answer:
       "A full set follows your natural lash cycle, so it stays looking full for roughly two to three weeks before you will want a fill. Your natural lashes shed and regrow continuously, which means extensions gradually fall away with them rather than all at once. Most clients come back every two to three weeks to keep their set looking fresh.",
@@ -90,9 +95,9 @@ export const VOLUME_FAQS: Faq[] = [
       "A well-made fan should not be. That is the entire reason volume extensions are made from much finer fibre than classic ones — a 6D fan of very fine lashes can weigh the same as one thicker classic extension. What causes problems is a fan built from fibre that is too thick for the count, which is a question of how the fan is made, not of how many lashes are in it.",
   },
   {
-    question: "How long does a volume appointment take?",
+    question: "How do I choose the right volume density?",
     answer:
-      "Longer than classic, because the fans are made by hand during the appointment rather than picked ready-made. Budget two and a half hours for a light volume full set and around three for mega volume. The durations listed with each price are realistic rather than optimistic.",
+      "Start with the finish you want rather than a fan count. Light volume looks airy, full volume gives a stronger lash line, and mega volume is intentionally bold. Mainne checks what your natural lashes can comfortably support and adjusts the design during the consultation.",
   },
 ];
 
@@ -110,7 +115,7 @@ export const NEW_WESTMINSTER_FAQS: Faq[] = [
   {
     question: "Can I drive instead?",
     answer:
-      "You can. It is a straightforward run up the Brunette Avenue corridor from Sapperton, and there is parking on the street. Most clients coming from New West find the train simpler, particularly for a set that runs past two hours.",
+      "You can. It is a straightforward run up the Brunette Avenue corridor from Sapperton, and there is street parking. Most clients coming from New Westminster find the train simpler because it avoids bridge traffic and parking at the end of an unhurried appointment.",
   },
 ];
 

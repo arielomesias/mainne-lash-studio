@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 import { JsonLd } from "@/components/JsonLd";
 import { BookingHero } from "@/components/book/BookingHero";
-import { Prices } from "@/components/book/Prices";
+import { BookingPolicies } from "@/components/book/BookingPolicies";
+import { EligibilityBooking } from "@/components/book/EligibilityBooking";
 import { WhatToExpect } from "@/components/book/WhatToExpect";
 import { SITE_URL } from "@/data/business";
 import { bookingServiceSchema, breadcrumbSchema } from "@/lib/schema";
@@ -13,13 +14,13 @@ import { bookingServiceSchema, breadcrumbSchema } from "@/lib/schema";
  * La keyword primaria es la intencion de precio, no la de reserva — de ahi que
  * el title lidere con "Prices" mientras el H1 dice "Book Your Appointment".
  *
- * <BookingPolicies> existe en components/book/ pero NO se monta: las politicas
- * de deposito y cancelacion no estan confirmadas y no se inventan.
+ * Google Appointment Schedule handles availability and customer contact fields;
+ * this static page handles the safety gate and explains the deposit workflow.
  */
 
 // 145 caracteres.
 const DESCRIPTION =
-  "Book classic, hybrid or volume lash extensions in Burnaby. Full price list & booking. Steps from Lougheed SkyTrain, serving New West & Coquitlam.";
+  "Book white LED lash extensions in Burnaby. Complete the eligibility check, choose a Google Calendar time and confirm with an e-Transfer deposit.";
 
 export const metadata: Metadata = {
   // El layout añade "| Mainne Lash Studio" via `template` (53 chars en total).
@@ -46,7 +47,8 @@ export default function BookPage() {
       />
 
       <BookingHero />
-      <Prices />
+      <EligibilityBooking />
+      <BookingPolicies />
       <WhatToExpect />
     </>
   );

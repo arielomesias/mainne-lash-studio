@@ -1,75 +1,126 @@
-import { Button } from "@/components/ui/Button";
-import { Container } from "@/components/ui/Container";
-import { FoxtailDivider } from "@/components/ui/FoxtailDivider";
+"use client";
 
-/*
- * docs/seo-strategy.md §2.1 propone el USP "certified lash artist", pero
- * docs/business-facts.md no confirma ninguna certificacion y
- * docs/content-guidelines.md prohibe afirmaciones no verificables. El claim se
- * añade aqui y en /about/ SOLO cuando Mainne confirme el certificado concreto.
- */
-const usps = [
-  "Private home studio",
-  "One client at a time",
-  "Steps from Lougheed SkyTrain",
-];
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import Image from "next/image";
+import { useRef } from "react";
+
+import { Button } from "@/components/ui/Button";
+import { BotanicalVine } from "@/components/ui/BotanicalVine";
+import { Container } from "@/components/ui/Container";
+import { asset } from "@/lib/asset";
+
+gsap.registerPlugin(useGSAP);
 
 export function Hero() {
+  const root = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        const timeline = gsap.timeline({ defaults: { ease: "power3.out" } });
+        timeline
+          .from("[data-hero-copy] > *", {
+            y: 28,
+            opacity: 0,
+            duration: 0.85,
+            stagger: 0.09,
+          })
+          .from(
+            "[data-hero-frame]",
+            { y: 24, rotate: 1.5, opacity: 0, duration: 1.05 },
+            0.12,
+          )
+          .from(
+            "[data-orbit]",
+            { scale: 0.72, opacity: 0, duration: 1.2 },
+            0.2,
+          );
+
+        gsap.to("[data-float]", {
+          yPercent: -5,
+          rotate: -1.4,
+          duration: 4.5,
+          ease: "sine.inOut",
+          repeat: -1,
+          yoyo: true,
+        });
+      });
+      return () => mm.revert();
+    },
+    { scope: root },
+  );
+
   return (
-    <div className="bg-bg pb-14 pt-12 sm:pb-20 sm:pt-16">
-      <Container>
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          {/* data-hero escalona la entrada de los hijos directos al cargar
-              (ver .reveal-ready [data-hero] en globals.css). Above the fold, por
-              eso es entrada-al-cargar y no scroll-reveal. */}
-          <div data-hero>
-            <h1 className="text-3xl leading-tight text-ink sm:text-4xl lg:text-5xl">
-              Eyelash Extensions in Burnaby
+    <div ref={root} className="hero-shell relative isolate overflow-hidden">
+      <div aria-hidden="true" className="hero-grain absolute inset-0 opacity-30" />
+      <BotanicalVine className="absolute -right-16 top-24 h-[30rem] text-olive/18 sm:right-0" />
+      <span
+        aria-hidden="true"
+        className="absolute -left-20 bottom-8 h-64 w-64 rounded-full bg-pampas/35 blur-3xl"
+      />
+
+      <Container className="relative py-10 sm:py-14 lg:py-16">
+        <div className="grid min-h-[calc(100svh-10rem)] items-center gap-7 sm:gap-10 lg:grid-cols-[1.02fr_.98fr] lg:gap-16">
+          <div data-hero-copy className="relative z-10 pb-2">
+            <p className="eyebrow">White LED lash extensions · Burnaby</p>
+
+            <h1 className="mt-5 max-w-[14ch] text-[clamp(3.15rem,6.5vw,6.35rem)] leading-[.9] tracking-[-.052em] text-ink">
+              Soft lashes.
+              <span className="block italic text-olive">Serious staying power.</span>
             </h1>
 
-            <p className="mt-6 max-w-prose text-base text-muted sm:text-lg">
-              Classic, hybrid and volume lash extensions, applied slowly and
-              one lash at a time in a quiet home studio. No rushing, no
-              crowded salon floor — just your set, done properly.
+            <p className="mt-7 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+              Bespoke extensions cured with Beam Light&apos;s white LED system
+              for precise bonding and retention—created one client at a time in
+              a calm private studio near Lougheed SkyTrain.
             </p>
 
-            {/* El separador va DESPUES de cada item, no antes: si fuera antes,
-                al envolver a 375px la linea nueva empezaria con una viñeta
-                huerfana. */}
-            <ul className="mt-6 flex flex-wrap gap-x-3 gap-y-2 text-sm text-olive-dark">
-              {usps.map((usp, i) => (
-                <li key={usp} className="flex items-center gap-3">
-                  {usp}
-                  {i < usps.length - 1 && (
-                    <span aria-hidden="true" className="text-beige">
-                      &bull;
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/book/">Book your appointment</Button>
-              <Button href="/classic-lash-extensions/" variant="secondary">
-                Explore lash sets
-              </Button>
+            <div className="mt-8 flex flex-col gap-3 min-[430px]:flex-row">
+              <Button href="/book/">Book an appointment</Button>
+              <span className="hidden sm:inline-flex">
+                <Button href="#lash-menu" variant="secondary">
+                  See styles &amp; prices
+                </Button>
+              </span>
             </div>
+
+            <ul className="mt-8 hidden flex-wrap gap-x-5 gap-y-2 text-xs font-semibold uppercase tracking-[.12em] text-olive-dark sm:flex">
+              <li>Custom mapping</li>
+              <li>White LED technique</li>
+              <li>Private studio</li>
+            </ul>
           </div>
 
-          {/*
-           * TODO: reemplazar por la foto real del trabajo de Mainne:
-           *   <Image src="/images/hero-volume-lashes-burnaby.webp" priority
-           *          width={1200} height={1200} sizes="(min-width:1024px) 50vw, 100vw"
-           *          alt="Volume lash extensions Burnaby before and after" />
-           * `priority` solo aqui: es el LCP. El aspect-square de abajo reserva
-           * el mismo espacio, para que al cambiar la imagen no haya salto (CLS).
-           */}
-          <div
-            aria-hidden="true"
-            className="flex aspect-square w-full items-center justify-center rounded-2xl border border-beige bg-cream text-olive/40"
-          >
-            <FoxtailDivider className="w-full text-olive/50" />
+          <div data-hero-frame className="relative mx-auto w-full max-w-[31rem] lg:max-w-none">
+            <div
+              data-orbit
+              aria-hidden="true"
+              className="absolute -inset-4 rounded-[45%_55%_50%_50%/55%_45%_55%_45%] border border-olive/30 sm:-inset-7"
+            />
+            <div
+              data-float
+              className="hero-photo-mask relative aspect-[4/5] overflow-hidden bg-pampas shadow-[0_30px_90px_rgba(58,61,38,.22)]"
+            >
+              <Image
+                src={asset("/images/results/hero-real.webp")}
+                alt="A real Mainne Lash Studio client wearing a custom textured lash set"
+                fill
+                priority
+                sizes="(min-width: 1024px) 46vw, (min-width: 640px) 70vw, 92vw"
+                className="object-cover object-[48%_48%]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
+              <p className="absolute bottom-5 left-5 rounded-full border border-white/40 bg-ink/35 px-4 py-2 text-xs font-semibold uppercase tracking-[.14em] text-white backdrop-blur-md">
+                Real client · custom set
+              </p>
+            </div>
+
+            <div className="absolute -bottom-6 -left-4 rounded-2xl border border-white/60 bg-bg/90 px-5 py-4 shadow-lg backdrop-blur-xl sm:-left-10">
+              <span className="block font-serif text-2xl text-olive">405 nm</span>
+              <span className="text-xs uppercase tracking-[.14em] text-muted">white LED system</span>
+            </div>
           </div>
         </div>
       </Container>

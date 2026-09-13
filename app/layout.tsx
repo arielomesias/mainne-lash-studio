@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Manrope, Newsreader } from "next/font/google";
 
 import { JsonLd } from "@/components/JsonLd";
 import { Header } from "@/components/Header";
@@ -11,16 +11,16 @@ import "./globals.css";
 
 // Auto-alojadas por next/font en el build. Nunca un <link> a fonts.googleapis.com:
 // añadiria un origen externo en la ruta critica del LCP.
-const fraunces = Fraunces({
+const newsreader = Newsreader({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-fraunces",
+  variable: "--font-newsreader",
 });
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-manrope",
 });
 
 export const metadata: Metadata = {
@@ -42,7 +42,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-CA" className={`${fraunces.variable} ${inter.variable}`}>
+    <html
+      lang="en-CA"
+      className={`${newsreader.variable} ${manrope.variable}`}
+      suppressHydrationWarning
+    >
       <body className="antialiased">
         {/*
          * Marca que hay JS ANTES del primer paint, para que el estado oculto

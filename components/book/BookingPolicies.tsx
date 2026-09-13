@@ -1,37 +1,22 @@
 import { Section, SectionHeading } from "@/components/ui/Section";
-
-/**
- * ⚠️ ESCRITO PERO NO MONTADO. app/book/page.tsx no lo renderiza todavia.
- *
- * §2.8 pide politicas de deposito y cancelacion, pero docs/business-facts.md
- * no las define y NO se inventan: a diferencia de un precio provisional, una
- * politica es un compromiso comercial que una clienta puede exigir.
- *
- * Para activarlo:
- *   1. Confirmar las politicas con Mainne y escribirlas en
- *      docs/business-facts.md (hoy estan como [CONFIRMAR]).
- *   2. Moverlas a un `POLICIES` en data/business.ts.
- *   3. Reemplazar `policies` de abajo por ese import y montar el componente
- *      en app/book/page.tsx.
- */
-
-type Policy = { title: string; body: string };
-
-// TODO [CONFIRMAR]: vacio a proposito. Ver docs/business-facts.md.
-const policies: Policy[] = [];
+import { BOOKING_POLICIES } from "@/data/business";
 
 export function BookingPolicies() {
-  if (policies.length === 0) return null;
-
   return (
-    <Section tone="cream" labelledBy="policies">
-      <SectionHeading id="policies">Deposits &amp; cancellations</SectionHeading>
+    <Section tone="cream" labelledBy="policies" className="border-t border-beige/70">
+      <p className="eyebrow">Clear from the start</p>
+      <SectionHeading id="policies" className="mt-4 text-4xl sm:text-5xl">
+        Deposits &amp; appointment policies
+      </SectionHeading>
 
-      <dl className="mt-8 max-w-prose space-y-6">
-        {policies.map((policy) => (
-          <div key={policy.title}>
-            <dt className="font-serif text-lg text-ink">{policy.title}</dt>
-            <dd className="mt-2 text-muted">{policy.body}</dd>
+      <dl className="mt-10 grid gap-4 md:grid-cols-2">
+        {BOOKING_POLICIES.map((policy, index) => (
+          <div key={policy.title} className="rounded-[1.4rem] border border-beige bg-bg p-6 sm:p-7">
+            <span aria-hidden="true" className="text-xs font-semibold tracking-[.13em] text-olive/60">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <dt className="mt-4 font-serif text-2xl text-ink">{policy.title}</dt>
+            <dd className="mt-3 text-sm leading-6 text-muted">{policy.body}</dd>
           </div>
         ))}
       </dl>

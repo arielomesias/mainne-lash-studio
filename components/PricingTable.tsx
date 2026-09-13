@@ -27,9 +27,7 @@ export function PricingTable({ service }: { service: ServicePricing }) {
 
       <div className="mt-4 overflow-x-auto">
         <table className="w-full min-w-[20rem] border-collapse text-left text-sm">
-          <caption className="sr-only">
-            {service.name} prices and appointment durations
-          </caption>
+          <caption className="sr-only">{service.name} prices</caption>
           <thead>
             <tr className="border-b border-beige text-muted">
               <th scope="col" className="py-2 pr-4 font-medium">
@@ -37,9 +35,6 @@ export function PricingTable({ service }: { service: ServicePricing }) {
               </th>
               <th scope="col" className="py-2 pr-4 font-medium">
                 Price
-              </th>
-              <th scope="col" className="py-2 font-medium">
-                Duration
               </th>
             </tr>
           </thead>
@@ -51,9 +46,6 @@ export function PricingTable({ service }: { service: ServicePricing }) {
                 </th>
                 <td className="py-3 pr-4 whitespace-nowrap text-olive-dark">
                   {row.priceLabel}
-                </td>
-                <td className="py-3 whitespace-nowrap text-muted">
-                  {row.duration}
                 </td>
               </tr>
             ))}

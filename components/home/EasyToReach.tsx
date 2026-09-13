@@ -22,28 +22,43 @@ const routes = [
 export function EasyToReach() {
   return (
     <Section labelledBy="easy-to-reach">
-      <SectionHeading id="easy-to-reach">Easy to reach</SectionHeading>
+      <div className="grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:items-center">
+        <div>
+          <p className="eyebrow">Private, never hard to find</p>
+          <SectionHeading id="easy-to-reach" className="mt-4 text-4xl leading-none sm:text-6xl">
+            Near Lougheed. Away from the salon rush.
+          </SectionHeading>
+          <p className="mt-6 max-w-prose text-sm leading-6 text-muted sm:text-base">
+            The studio is a short walk from Lougheed SkyTrain station, one of
+            the region&apos;s best-connected points. The room stays private and
+            quiet; the exact residential address stays private until your
+            appointment is confirmed.
+          </p>
+        </div>
 
-      <p className="mt-4 max-w-prose text-muted">
-        The studio is steps from Lougheed SkyTrain station, which happens to be
-        one of the better-connected points in the region. If you are coming from
-        anywhere along the Millennium or Expo lines, you can get here without a
-        car — and without circling a parking lot afterwards.
-      </p>
+        <div aria-label="Travel areas around Lougheed" className="relative flex min-h-[25rem] items-center justify-center overflow-hidden rounded-[2rem] bg-sage text-cream">
+          <span aria-hidden="true" className="absolute h-80 w-80 rounded-full border border-cream/12" />
+          <span aria-hidden="true" className="absolute h-56 w-56 rounded-full border border-cream/16" />
+          <span aria-hidden="true" className="absolute h-32 w-32 rounded-full border border-pampas/35" />
+          <div className="relative z-10 text-center">
+            <span className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-pampas font-serif text-3xl text-ink">M</span>
+            <p className="mt-3 font-serif text-2xl">Lougheed</p>
+            <p className="text-xs uppercase tracking-[.12em] text-cream/55">SkyTrain</p>
+          </div>
+          <span className="absolute left-[7%] top-[20%] rounded-full border border-cream/20 bg-cream/7 px-4 py-2 text-xs">Burnaby</span>
+          <span className="absolute right-[5%] top-[27%] rounded-full border border-cream/20 bg-cream/7 px-4 py-2 text-xs">Coquitlam</span>
+          <span className="absolute bottom-[16%] left-[13%] rounded-full border border-cream/20 bg-cream/7 px-4 py-2 text-xs">New Westminster</span>
+        </div>
+      </div>
 
-      <div className="mt-10 grid gap-5 sm:grid-cols-3">
+      <div className="mt-8 grid gap-4 sm:grid-cols-3">
         {routes.map((route) => (
-          <Card key={route.city}>
-            <h3 className="font-serif text-lg text-ink">{route.city}</h3>
-            <p className="mt-2 text-sm text-muted">{route.detail}</p>
+          <Card key={route.city} className="rounded-[1.3rem] border-beige bg-cream/55">
+            <h3 className="font-serif text-xl text-ink">{route.city}</h3>
+            <p className="mt-2 text-sm leading-6 text-muted">{route.detail}</p>
           </Card>
         ))}
       </div>
-
-      <p className="mt-8 text-sm text-muted">
-        The studio is inside a private home, so the exact address is shared once
-        your appointment is confirmed.
-      </p>
     </Section>
   );
 }

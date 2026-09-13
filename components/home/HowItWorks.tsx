@@ -17,20 +17,24 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <Section tone="cream" labelledBy="how-it-works">
-      <SectionHeading id="how-it-works">How an appointment works</SectionHeading>
+    <Section tone="cream" labelledBy="how-it-works" className="overflow-hidden">
+      <p className="eyebrow">Calm, considered, personal</p>
+      <SectionHeading id="how-it-works" className="mt-4 max-w-[14ch] text-4xl leading-none sm:text-6xl">
+        A simple path to your new set.
+      </SectionHeading>
 
-      <ol className="mt-10 grid gap-8 sm:grid-cols-3">
+      <ol className="mt-10 grid gap-4 sm:grid-cols-3">
         {steps.map((step, i) => (
-          <li key={step.title}>
+          <li key={step.title} className="relative min-h-72 overflow-hidden rounded-[1.5rem] border border-beige bg-bg p-6 sm:p-7">
             <span
               aria-hidden="true"
-              className="font-serif text-3xl text-olive/50"
+              className="font-serif text-5xl italic text-olive/25"
             >
               {String(i + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-2 font-serif text-xl text-ink">{step.title}</h3>
-            <p className="mt-2 text-sm text-muted">{step.body}</p>
+            <h3 className="mt-8 font-serif text-3xl text-ink">{step.title}</h3>
+            <p className="mt-3 text-sm leading-6 text-muted">{step.body}</p>
+            <span aria-hidden="true" className="absolute -bottom-14 -right-10 h-32 w-32 rounded-full border border-olive/10" />
           </li>
         ))}
       </ol>

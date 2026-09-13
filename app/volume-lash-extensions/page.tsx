@@ -104,8 +104,8 @@ export default function VolumePage() {
             <p>
               Mega volume generally means fans of six extensions or more, made
               from the finest fibre used in lashing. It is the densest set
-              available and the longest appointment, because a great many very
-              small fans have to be made by hand before any of them are placed.
+              available. It requires a great many very small fans to be shaped
+              by hand and placed with careful isolation.
             </p>
             <p>
               The constraint is the same one that governs every set here: what
@@ -125,9 +125,9 @@ export default function VolumePage() {
         <SectionHeading id="pricing">Volume pricing</SectionHeading>
 
         <p className="mt-4 max-w-prose text-muted">
-          The jump in price across the volume sets tracks the time each takes.
-          Fans are made during your appointment, so a denser set is not a more
-          expensive product — it is more hours.
+          The jump in price across volume sets reflects the additional handmade
+          detail in each design. A denser set uses more individually shaped fans
+          and more precise placement across the lash line.
         </p>
 
         <div className="mt-8">

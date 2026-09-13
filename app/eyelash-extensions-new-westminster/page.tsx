@@ -105,7 +105,7 @@ export default function NewWestminsterPage() {
             </p>
             <p>
               If you would rather drive, the run up Brunette Avenue is direct and
-              there is street parking at the other end. For a two-hour volume
+              there is street parking at the other end. For an unhurried volume
               appointment, though, most people find the train less trouble than
               the return trip at five o&rsquo;clock.
             </p>

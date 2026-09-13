@@ -79,9 +79,9 @@ export default function ClassicPage() {
             </p>
             <p>
               Because each extension sits on a single lash, classic is the
-              lightest of the three sets and usually the quickest appointment.
-              It is a sensible first set if you have never worn extensions and
-              are not sure how you will feel about them.
+              lightest of the three sets and preserves the most natural amount
+              of density. It is a sensible first set if you have never worn
+              extensions and are not sure how you will feel about them.
             </p>
           </div>
         </div>

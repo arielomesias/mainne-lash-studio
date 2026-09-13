@@ -18,6 +18,7 @@ import {
   COUNTRY,
   EMAIL,
   PHONE,
+  OPENING_HOURS,
   REGION,
   SITE_URL,
 } from "@/data/business";
@@ -41,12 +42,13 @@ export function localBusinessSchema() {
     // Sin "certified": el claim no se usa hasta que docs/business-facts.md
     // confirme la certificacion concreta (docs/content-guidelines.md).
     description:
-      "Independent lash artist offering classic, hybrid and volume eyelash extensions from a private home studio in Burnaby, BC.",
+      "Independent lash artist offering custom white LED classic, hybrid, textured and volume eyelash extensions from a private studio in Burnaby, BC.",
     priceRange: PRICE_RANGE,
     currenciesAccepted: "CAD",
     paymentAccepted: "Interac e-Transfer",
     telephone: PHONE,
     email: EMAIL,
+    openingHours: OPENING_HOURS.schema,
     // `contactOption` deja explicito que el numero es solo para SMS.
     contactPoint: {
       "@type": "ContactPoint",

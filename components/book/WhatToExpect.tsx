@@ -13,8 +13,8 @@ const notes = [
     body: "Arrive with clean lashes and no eye makeup — mascara residue keeps the adhesive from bonding. Skip caffeine if you can; it makes eyes flutter, which slows everything down.",
   },
   {
-    title: "How long it takes",
-    body: "Anywhere from forty-five minutes for a fill to three hours for a mega volume full set. The duration next to each price is realistic, not optimistic.",
+    title: "LED eligibility",
+    body: "Please review the eligibility screen before booking. White LED service is not offered during pregnancy or breastfeeding, and some conditions or medications may make light exposure unsuitable.",
   },
 ];
 
@@ -40,8 +40,8 @@ export function WhatToExpect() {
         >
           classic lash extensions
         </Link>{" "}
-        first — it is the most natural of the three, and the easiest place to
-        start.
+        first — it is the most natural place to start. Mainne can refine your
+        choice during the consultation.
       </p>
     </Section>
   );

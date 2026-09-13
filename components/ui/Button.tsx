@@ -6,11 +6,11 @@ type Variant = "primary" | "secondary";
 /* docs/design-system.md: primario = fondo olivo, texto crema, radio suave
  * (ni cuadrado ni pill extremo). */
 const base =
-  "inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium tracking-wide transition-colors duration-200";
+  "inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-semibold tracking-wide transition duration-300 hover:-translate-y-0.5";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-olive text-cream hover:bg-olive-dark",
-  secondary: "border border-olive/40 text-olive hover:bg-olive/10",
+  primary: "bg-olive text-cream shadow-[0_10px_28px_rgb(63_70_52_/_0.14)] hover:bg-olive-dark",
+  secondary: "border border-olive/35 bg-bg/40 text-olive-dark backdrop-blur hover:bg-olive/8",
 };
 
 export function Button({
