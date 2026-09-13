@@ -135,9 +135,6 @@ export function LashMenu() {
                   className="object-cover object-[63%_center] transition duration-700 ease-out group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent sm:bg-gradient-to-r sm:from-ink/20 sm:to-transparent" />
-                <span className="absolute bottom-3 right-3 rounded-full bg-ink/55 px-3 py-1.5 text-[.62rem] uppercase tracking-[.12em] text-cream/80 backdrop-blur-md">
-                  Illustrative style reference
-                </span>
               </div>
             </article>
           ))}
