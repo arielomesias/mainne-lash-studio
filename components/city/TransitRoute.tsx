@@ -1,3 +1,5 @@
+import { BotanicalPampas } from "@/components/ui/BotanicalPampas";
+
 export function TransitRoute({
   label,
   stops,
@@ -7,6 +9,10 @@ export function TransitRoute({
 }) {
   return (
     <aside className="relative overflow-hidden rounded-[1.5rem_5rem_1.5rem_5rem] bg-ink p-7 text-cream sm:p-9">
+      <BotanicalPampas
+        mirrored
+        className="absolute -bottom-32 -right-20 h-[28rem] text-pampas/[0.1]"
+      />
       <p className="text-[.67rem] font-semibold uppercase tracking-[.15em] text-sage-light">
         {label}
       </p>

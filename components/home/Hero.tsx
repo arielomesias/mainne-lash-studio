@@ -110,16 +110,13 @@ export function Hero() {
             >
               <Image
                 src={asset("/images/results/v2/hero-client-enhanced.webp")}
-                alt="A Mainne Lash Studio client wearing a custom textured lash set, enhanced from client footage"
+                alt="A Mainne Lash Studio client wearing a custom textured lash set"
                 fill
                 priority
                 sizes="(min-width: 1024px) 46vw, (min-width: 640px) 70vw, 92vw"
                 className="object-cover object-[48%_48%]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
-              <p className="absolute bottom-5 left-5 rounded-full border border-white/40 bg-ink/35 px-4 py-2 text-xs font-semibold uppercase tracking-[.14em] text-white backdrop-blur-md">
-                Enhanced from client footage
-              </p>
             </div>
 
             <div className="absolute -bottom-6 -left-4 rounded-2xl border border-white/60 bg-bg/90 px-5 py-4 shadow-lg backdrop-blur-xl sm:-left-10">

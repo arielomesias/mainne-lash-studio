@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/Card";
+import { BotanicalPampas } from "@/components/ui/BotanicalPampas";
 import { Section, SectionHeading } from "@/components/ui/Section";
 
 const routes = [
@@ -37,6 +38,7 @@ export function EasyToReach() {
         </div>
 
         <div aria-label="Travel areas around Lougheed" className="relative flex min-h-[25rem] items-center justify-center overflow-hidden rounded-[2rem] bg-sage text-cream">
+          <BotanicalPampas className="absolute -bottom-16 -left-12 h-[27rem] text-pampas/[0.16] sm:h-[31rem]" />
           <span aria-hidden="true" className="absolute h-80 w-80 rounded-full border border-cream/12" />
           <span aria-hidden="true" className="absolute h-56 w-56 rounded-full border border-cream/16" />
           <span aria-hidden="true" className="absolute h-32 w-32 rounded-full border border-pampas/35" />

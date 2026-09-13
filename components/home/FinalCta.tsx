@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import { BotanicalPampas } from "@/components/ui/BotanicalPampas";
 import { Container } from "@/components/ui/Container";
 import { FoxtailDivider } from "@/components/ui/FoxtailDivider";
 import { Reveal } from "@/components/ui/Reveal";
@@ -8,6 +9,10 @@ export function FinalCta() {
     <div className="relative overflow-hidden bg-sage py-16 text-cream sm:py-24">
       <span aria-hidden="true" className="absolute -left-32 top-10 h-96 w-96 rounded-full border border-cream/10" />
       <span aria-hidden="true" className="absolute -right-20 -top-40 h-[32rem] w-[32rem] rounded-full border border-pampas/15" />
+      <BotanicalPampas
+        mirrored
+        className="absolute -bottom-24 -right-10 h-[34rem] text-pampas/[0.18] sm:right-4 sm:h-[40rem]"
+      />
       <Container>
         <Reveal>
           <FoxtailDivider className="text-pampas/55" />
