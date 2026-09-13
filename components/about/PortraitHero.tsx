@@ -19,7 +19,7 @@ export function PortraitHero() {
       imageSrc="/images/results/v2/beam-application-enhanced.webp"
       imageAlt="Mainne applying eyelash extensions with the Beam Light white LED system"
       imagePosition="object-[52%_45%]"
-      badge="Real application footage · professionally enhanced"
+      badge="Beam Light application"
       secondaryLabel="See the lash menu"
       secondaryHref="/#lash-menu"
       imageLeft

@@ -21,14 +21,14 @@ export function BeamLightFeature() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-[8rem_1.6rem_8rem_1.6rem] bg-ink shadow-2xl">
             <Image
               src={asset("/images/results/v2/beam-application-enhanced.webp")}
-              alt="Mainne applying an eyelash extension using the Beam Light white LED system, enhanced from real application footage"
+              alt="Mainne applying an eyelash extension using the Beam Light white LED system"
               fill
               sizes="(min-width: 1024px) 42vw, 90vw"
               className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent" />
             <span className="absolute bottom-5 left-5 rounded-full border border-cream/25 bg-ink/45 px-4 py-2 text-[.66rem] uppercase tracking-[.13em] text-cream backdrop-blur">
-              Enhanced from real application footage
+              Beam Light application
             </span>
           </div>
           <div aria-hidden="true" className="absolute -bottom-5 -right-5 -z-10 h-full w-full rounded-[8rem_1.6rem_8rem_1.6rem] border border-cream/18" />

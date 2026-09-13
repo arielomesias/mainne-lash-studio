@@ -5,21 +5,21 @@ import { asset } from "@/lib/asset";
 const images = [
   {
     src: "/images/results/v2/hero-client-enhanced.webp",
-    alt: "A finished textured lash set by Mainne Lash Studio, enhanced from client footage",
+    alt: "A finished textured lash set by Mainne Lash Studio",
     label: "Custom texture",
     className: "lg:col-span-7",
     position: "object-[58%_center]",
   },
   {
     src: "/images/results/v2/soft-volume-open-enhanced.webp",
-    alt: "A finished soft volume eyelash set by Mainne Lash Studio with both eyes open, enhanced from client footage",
+    alt: "A finished soft volume eyelash set by Mainne Lash Studio with both eyes open",
     label: "Soft volume",
     className: "lg:col-span-5",
     position: "object-center",
   },
   {
     src: "/images/results/v2/mapping-process-enhanced.webp",
-    alt: "Detailed lash mapping during an appointment with Mainne, enhanced from real footage",
+    alt: "Detailed lash mapping during an appointment with Mainne",
     label: "Mapped for you",
     className: "lg:col-span-5",
     position: "object-center",
@@ -38,8 +38,8 @@ export function RealResults() {
             </h2>
           </div>
           <p className="max-w-md text-sm leading-6 text-muted">
-            Each photograph is reconstructed from Mainne&apos;s own client and
-            application footage to restore the detail lost in the original video.
+            A closer look at the precision, texture and eye mapping behind every
+            custom set.
           </p>
         </div>
 
@@ -76,7 +76,9 @@ export function RealResults() {
               sizes="(min-width: 1024px) 58vw, 100vw"
               className="object-cover object-center"
             />
-            <figcaption className="absolute bottom-4 right-4 rounded-full bg-ink/55 px-4 py-2 text-[.66rem] uppercase tracking-[.13em] text-cream backdrop-blur">Enhanced from real process footage</figcaption>
+            <figcaption className="absolute bottom-4 right-4 rounded-full bg-ink/55 px-4 py-2 text-[.66rem] uppercase tracking-[.13em] text-cream backdrop-blur">
+              Lash mapping
+            </figcaption>
           </figure>
         </div>
       </div>
