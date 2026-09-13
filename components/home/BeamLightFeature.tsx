@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { BotanicalPampas } from "@/components/ui/BotanicalPampas";
 import { BotanicalVine } from "@/components/ui/BotanicalVine";
 import { BEAM_LIGHT_PRODUCT_URL } from "@/data/business";
 import { asset } from "@/lib/asset";
@@ -14,19 +15,20 @@ export function BeamLightFeature() {
   return (
     <section aria-labelledby="beam-light-title" className="relative overflow-hidden bg-sage py-16 text-cream sm:py-24">
       <BotanicalVine className="absolute -right-14 -top-20 h-[34rem] rotate-[18deg] text-cream/10" />
+      <BotanicalPampas className="absolute -bottom-28 -left-12 h-[37rem] text-pampas/[0.13]" />
       <div className="mx-auto grid w-full max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:gap-20">
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[8rem_1.6rem_8rem_1.6rem] bg-ink shadow-2xl">
             <Image
-              src={asset("/images/results/beam-process-real.webp")}
-              alt="Mainne applying an eyelash extension using the Beam Light white LED system"
+              src={asset("/images/results/v2/beam-application-enhanced.webp")}
+              alt="Mainne applying an eyelash extension using the Beam Light white LED system, enhanced from real application footage"
               fill
               sizes="(min-width: 1024px) 42vw, 90vw"
               className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent" />
             <span className="absolute bottom-5 left-5 rounded-full border border-cream/25 bg-ink/45 px-4 py-2 text-[.66rem] uppercase tracking-[.13em] text-cream backdrop-blur">
-              Real application · Beam Light Arctica
+              Enhanced from real application footage
             </span>
           </div>
           <div aria-hidden="true" className="absolute -bottom-5 -right-5 -z-10 h-full w-full rounded-[8rem_1.6rem_8rem_1.6rem] border border-cream/18" />

@@ -4,22 +4,22 @@ import { asset } from "@/lib/asset";
 
 const images = [
   {
-    src: "/images/results/hero-real.webp",
-    alt: "A finished textured lash set by Mainne Lash Studio",
+    src: "/images/results/v2/hero-client-enhanced.webp",
+    alt: "A finished textured lash set by Mainne Lash Studio, enhanced from client footage",
     label: "Custom texture",
     className: "lg:col-span-7",
     position: "object-[58%_center]",
   },
   {
-    src: "/images/results/soft-volume-real.webp",
-    alt: "A finished soft volume eyelash set by Mainne Lash Studio",
+    src: "/images/results/v2/soft-volume-open-enhanced.webp",
+    alt: "A finished soft volume eyelash set by Mainne Lash Studio with both eyes open, enhanced from client footage",
     label: "Soft volume",
     className: "lg:col-span-5",
     position: "object-center",
   },
   {
-    src: "/images/results/mapping-process-real.webp",
-    alt: "Detailed lash mapping during an appointment with Mainne",
+    src: "/images/results/v2/mapping-process-enhanced.webp",
+    alt: "Detailed lash mapping during an appointment with Mainne, enhanced from real footage",
     label: "Mapped for you",
     className: "lg:col-span-5",
     position: "object-center",
@@ -38,8 +38,8 @@ export function RealResults() {
             </h2>
           </div>
           <p className="max-w-md text-sm leading-6 text-muted">
-            No stock photos in this gallery. Every image below was taken from
-            Mainne&apos;s own application and finished-set videos.
+            Each photograph is reconstructed from Mainne&apos;s own client and
+            application footage to restore the detail lost in the original video.
           </p>
         </div>
 
@@ -76,7 +76,7 @@ export function RealResults() {
               sizes="(min-width: 1024px) 58vw, 100vw"
               className="object-cover object-center"
             />
-            <figcaption className="absolute bottom-4 right-4 rounded-full bg-ink/55 px-4 py-2 text-[.66rem] uppercase tracking-[.13em] text-cream backdrop-blur">Real process</figcaption>
+            <figcaption className="absolute bottom-4 right-4 rounded-full bg-ink/55 px-4 py-2 text-[.66rem] uppercase tracking-[.13em] text-cream backdrop-blur">Enhanced from real process footage</figcaption>
           </figure>
         </div>
       </div>

@@ -144,6 +144,52 @@
     white-space: nowrap;
   }
 
+  .pampas-plume {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    will-change: transform;
+  }
+
+  .pampas-plume-a {
+    animation: pampas-sway 6.4s ease-in-out infinite alternate;
+  }
+
+  .pampas-plume-b {
+    animation: pampas-sway 7.3s ease-in-out -1.8s infinite alternate-reverse;
+  }
+
+  .pampas-plume-c {
+    animation: pampas-sway 5.8s ease-in-out -3.1s infinite alternate;
+  }
+
+  @keyframes pampas-sway {
+    from { transform: rotate(-1.2deg); }
+    to { transform: rotate(1.7deg); }
+  }
+
+  .pampas-plume {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    will-change: transform;
+  }
+
+  .pampas-plume-a {
+    animation: pampas-sway 6.8s ease-in-out infinite alternate;
+  }
+
+  .pampas-plume-b {
+    animation: pampas-sway 8.2s ease-in-out -1.4s infinite alternate-reverse;
+  }
+
+  .pampas-plume-c {
+    animation: pampas-sway 7.5s ease-in-out -2.1s infinite alternate;
+  }
+
+  @keyframes pampas-sway {
+    from { transform: rotate(-1.4deg); }
+    to { transform: rotate(2.2deg); }
+  }
+
   @media (max-width: 639px) {
     .hero-shell [data-float] {
       border-radius: 7rem 1.5rem 7rem 1.5rem;

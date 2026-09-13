@@ -25,11 +25,6 @@ export type LashStyle = {
   imageAlt: string;
 };
 
-const classicImage = "/images/styles/classic-reference.webp";
-const wetImage = "/images/styles/wet-reference.webp";
-const wispyImage = "/images/styles/wispy-reference.webp";
-const volumeImage = "/images/styles/volume-reference.webp";
-
 export const LASH_STYLES: LashStyle[] = [
   {
     slug: "classic-1x1",
@@ -39,7 +34,7 @@ export const LASH_STYLES: LashStyle[] = [
       "One fine extension per natural lash for clean length and soft, mascara-like definition.",
     setPrice: 125,
     refillPrice: 85,
-    image: classicImage,
+    image: "/images/styles/v2/classic-1x1.webp",
     imageAlt: "Classic one-to-one eyelash extension style reference",
   },
   {
@@ -50,7 +45,7 @@ export const LASH_STYLES: LashStyle[] = [
       "A balanced mix of classic lashes and light fans that fills small gaps while staying soft.",
     setPrice: 145,
     refillPrice: 95,
-    image: classicImage,
+    image: "/images/styles/v2/hybrid.webp",
     imageAlt: "Soft hybrid eyelash extension style reference",
   },
   {
@@ -61,7 +56,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Slim, closed fans create glossy-looking points and a fresh, textured lash line.",
     setPrice: 150,
     refillPrice: 100,
-    image: wetImage,
+    image: "/images/styles/v2/wet-look.webp",
     imageAlt: "Wet look eyelash extension style reference",
   },
   {
@@ -72,7 +67,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Darker, defined texture that mimics freshly combed mascara without a heavy finish.",
     setPrice: 150,
     refillPrice: 100,
-    image: wetImage,
+    image: "/images/styles/v2/mascara-effect.webp",
     imageAlt: "Mascara effect eyelash extension style reference",
   },
   {
@@ -83,7 +78,7 @@ export const LASH_STYLES: LashStyle[] = [
       "A light, diffused design with gentle dimension for a bright and effortless gaze.",
     setPrice: 155,
     refillPrice: 105,
-    image: classicImage,
+    image: "/images/styles/v2/aura-effect.webp",
     imageAlt: "Airy aura eyelash extension style reference",
   },
   {
@@ -94,7 +89,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Feathery fans add movement and fluffy volume while keeping the shape light around the eye.",
     setPrice: 165,
     refillPrice: 110,
-    image: volumeImage,
+    image: "/images/styles/v2/hawaiian-effect.webp",
     imageAlt: "Soft Hawaiian volume eyelash extension style reference",
   },
   {
@@ -105,7 +100,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Three-dimensional fans open the eye with graceful depth and a polished, balanced finish.",
     setPrice: 160,
     refillPrice: 110,
-    image: volumeImage,
+    image: "/images/styles/v2/aurora-3d.webp",
     imageAlt: "Three-dimensional soft volume lash style reference",
   },
   {
@@ -116,7 +111,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Four-dimensional definition creates a smooth, eyeliner-like lash line without excessive weight.",
     setPrice: 175,
     refillPrice: 120,
-    image: volumeImage,
+    image: "/images/styles/v2/greek-4d.webp",
     imageAlt: "Greek four-dimensional volume lash style reference",
   },
   {
@@ -127,7 +122,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Airy volume with softly staggered tips for a darker wet-inspired look that still feels open.",
     setPrice: 175,
     refillPrice: 120,
-    image: wispyImage,
+    image: "/images/styles/v2/aurora-4d.webp",
     imageAlt: "Aurora four-dimensional wispy lash style reference",
   },
   {
@@ -138,7 +133,7 @@ export const LASH_STYLES: LashStyle[] = [
       "A sculpted, feline shape with a dense lash line and a sophisticated outer-eye lift.",
     setPrice: 185,
     refillPrice: 125,
-    image: volumeImage,
+    image: "/images/styles/v2/egyptian-5d.webp",
     imageAlt: "Dramatic Egyptian five-dimensional lash style reference",
   },
   {
@@ -149,7 +144,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Bold volume with a softened top line, designed to fill visible gaps and deepen the gaze.",
     setPrice: 185,
     refillPrice: 125,
-    image: volumeImage,
+    image: "/images/styles/v2/aura-5d.webp",
     imageAlt: "Aura five-dimensional volume lash style reference",
   },
   {
@@ -160,7 +155,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Ultra-fine six-lash fans build rich density and an unmistakably glamorous finish.",
     setPrice: 195,
     refillPrice: 130,
-    image: volumeImage,
+    image: "/images/styles/v2/volume-6d.webp",
     imageAlt: "Full six-dimensional volume lash style reference",
   },
   {
@@ -171,7 +166,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Fans are shaped by hand during the service for a tailored, soft and seamless result.",
     setPrice: 210,
     refillPrice: 140,
-    image: volumeImage,
+    image: "/images/styles/v2/handmade-volume.webp",
     imageAlt: "Handmade volume eyelash extension style reference",
   },
   {
@@ -182,7 +177,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Maximum fullness using ultra-fine fibers for a deep, plush lash line and statement finish.",
     setPrice: 220,
     refillPrice: 150,
-    image: volumeImage,
+    image: "/images/styles/v2/mega-volume.webp",
     imageAlt: "Mega volume eyelash extension style reference",
   },
   {
@@ -193,7 +188,7 @@ export const LASH_STYLES: LashStyle[] = [
       "A rising outer-corner map visually lengthens the eye for a crisp, lifted feline shape.",
     setPrice: 175,
     refillPrice: 120,
-    image: wispyImage,
+    image: "/images/styles/v2/foxy-effect.webp",
     imageAlt: "Foxy mapped eyelash extension style reference",
   },
   {
@@ -204,7 +199,7 @@ export const LASH_STYLES: LashStyle[] = [
       "A soft volume base with longer, intentionally placed peaks for depth and lived-in texture.",
     setPrice: 200,
     refillPrice: 135,
-    image: wispyImage,
+    image: "/images/styles/v2/wispy-volume.webp",
     imageAlt: "Wispy volume eyelash extension style reference",
   },
   {
@@ -215,7 +210,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Delicate texture and fine peaks add movement while preserving a very natural amount of volume.",
     setPrice: 175,
     refillPrice: 120,
-    image: wispyImage,
+    image: "/images/styles/v2/light-wispy.webp",
     imageAlt: "Light wispy eyelash extension style reference",
   },
   {
@@ -226,7 +221,7 @@ export const LASH_STYLES: LashStyle[] = [
       "Defined, separated peaks create a playful doll-eye rhythm inspired by expressive illustrated eyes.",
     setPrice: 185,
     refillPrice: 125,
-    image: wispyImage,
+    image: "/images/styles/v2/anime-lash.webp",
     imageAlt: "Anime inspired spiked eyelash extension style reference",
   },
 ];

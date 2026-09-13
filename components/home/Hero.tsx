@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRef } from "react";
 
 import { Button } from "@/components/ui/Button";
+import { BotanicalPampas } from "@/components/ui/BotanicalPampas";
 import { BotanicalVine } from "@/components/ui/BotanicalVine";
 import { Container } from "@/components/ui/Container";
 import { asset } from "@/lib/asset";
@@ -56,6 +57,10 @@ export function Hero() {
     <div ref={root} className="hero-shell relative isolate overflow-hidden">
       <div aria-hidden="true" className="hero-grain absolute inset-0 opacity-30" />
       <BotanicalVine className="absolute -right-16 top-24 h-[30rem] text-olive/18 sm:right-0" />
+      <BotanicalPampas
+        mirrored
+        className="absolute -bottom-20 -left-9 h-[28rem] text-olive/20 sm:-left-2 sm:h-[36rem]"
+      />
       <span
         aria-hidden="true"
         className="absolute -left-20 bottom-8 h-64 w-64 rounded-full bg-pampas/35 blur-3xl"
@@ -104,8 +109,8 @@ export function Hero() {
               className="hero-photo-mask relative aspect-[4/5] overflow-hidden bg-pampas shadow-[0_30px_90px_rgba(58,61,38,.22)]"
             >
               <Image
-                src={asset("/images/results/hero-real.webp")}
-                alt="A real Mainne Lash Studio client wearing a custom textured lash set"
+                src={asset("/images/results/v2/hero-client-enhanced.webp")}
+                alt="A Mainne Lash Studio client wearing a custom textured lash set, enhanced from client footage"
                 fill
                 priority
                 sizes="(min-width: 1024px) 46vw, (min-width: 640px) 70vw, 92vw"
@@ -113,7 +118,7 @@ export function Hero() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
               <p className="absolute bottom-5 left-5 rounded-full border border-white/40 bg-ink/35 px-4 py-2 text-xs font-semibold uppercase tracking-[.14em] text-white backdrop-blur-md">
-                Real client · custom set
+                Enhanced from client footage
               </p>
             </div>
 

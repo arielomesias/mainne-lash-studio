@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
+import { BotanicalPampas } from "@/components/ui/BotanicalPampas";
 import { LASH_FAMILIES, LASH_STYLES, type LashFamily } from "@/data/catalog";
 import { asset } from "@/lib/asset";
 
@@ -48,6 +49,7 @@ export function LashMenu() {
     <section ref={root} id="lash-menu" aria-labelledby="lash-menu-title" className="relative overflow-hidden bg-ink py-16 text-cream sm:py-24">
       <div aria-hidden="true" className="absolute -left-24 top-20 h-72 w-72 rounded-full border border-cream/10" />
       <div aria-hidden="true" className="absolute -left-12 top-32 h-72 w-72 rounded-full border border-cream/10" />
+      <BotanicalPampas mirrored className="absolute -right-12 top-20 h-[32rem] text-pampas/[0.08]" />
 
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
@@ -60,8 +62,8 @@ export function LashMenu() {
           <div className="lg:pb-2">
             <p className="max-w-2xl text-base leading-7 text-cream/68 sm:text-lg">
               Every look is adapted to your natural lashes and eye shape. These
-              images are visual references—not client results—so your finished
-              set will be uniquely yours.
+              images are AI-created visual references—not Mainne client results—so
+              your finished set will be uniquely yours.
             </p>
             <p className="mt-3 text-xs uppercase tracking-[.14em] text-pampas/75">
               Preview pricing · final launch rates to be confirmed
@@ -134,7 +136,7 @@ export function LashMenu() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent sm:bg-gradient-to-r sm:from-ink/20 sm:to-transparent" />
                 <span className="absolute bottom-3 right-3 rounded-full bg-ink/55 px-3 py-1.5 text-[.62rem] uppercase tracking-[.12em] text-cream/80 backdrop-blur-md">
-                  Style reference
+                  Illustrative style reference
                 </span>
               </div>
             </article>
