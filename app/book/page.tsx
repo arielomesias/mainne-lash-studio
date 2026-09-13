@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { BookingHero } from "@/components/book/BookingHero";
 import { BookingPolicies } from "@/components/book/BookingPolicies";
 import { EligibilityBooking } from "@/components/book/EligibilityBooking";
+import { Prices } from "@/components/book/Prices";
 import { WhatToExpect } from "@/components/book/WhatToExpect";
 import { SITE_URL } from "@/data/business";
 import { bookingServiceSchema, breadcrumbSchema } from "@/lib/schema";
@@ -48,6 +49,7 @@ export default function BookPage() {
 
       <BookingHero />
       <EligibilityBooking />
+      <Prices />
       <BookingPolicies />
       <WhatToExpect />
     </>

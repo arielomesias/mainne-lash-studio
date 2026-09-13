@@ -1,5 +1,8 @@
+import Image from "next/image";
+
 import { Card } from "@/components/ui/Card";
 import { Section, SectionHeading } from "@/components/ui/Section";
+import { asset } from "@/lib/asset";
 
 /*
  * Descripcion del oficio, no de credenciales. Todo lo que se afirma aqui es
@@ -25,12 +28,27 @@ const principles = [
 export function HowIWork() {
   return (
     <Section labelledBy="how-i-work">
-      <SectionHeading id="how-i-work">How I work</SectionHeading>
-
-      <p className="mt-4 max-w-prose text-muted">
-        Most of what separates a set that lasts from one that does not happens
-        before it looks like anything at all.
-      </p>
+      <div className="grid items-end gap-8 lg:grid-cols-[.8fr_1.2fr]">
+        <div>
+          <p className="eyebrow">The craft before the reveal</p>
+          <SectionHeading id="how-i-work" className="mt-4 text-4xl sm:text-5xl">
+            How I work
+          </SectionHeading>
+          <p className="mt-4 max-w-prose text-muted">
+            Most of what shapes a clean, lasting set happens before it looks
+            like anything at all.
+          </p>
+        </div>
+        <div className="relative aspect-[16/8] overflow-hidden rounded-[5rem_1.4rem_5rem_1.4rem] bg-cream">
+          <Image
+            src={asset("/images/results/v2/mapping-process-enhanced.webp")}
+            alt="Detailed lash mapping during a Mainne Lash Studio appointment"
+            fill
+            sizes="(min-width: 1024px) 58vw, 100vw"
+            className="object-cover object-[50%_42%]"
+          />
+        </div>
+      </div>
 
       <div className="mt-10 grid gap-5 sm:grid-cols-3">
         {principles.map((principle) => (

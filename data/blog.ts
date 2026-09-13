@@ -22,6 +22,9 @@ export type BlogPost = {
   description: string;
   /** Resumen de una linea para la card del hub. */
   excerpt: string;
+  coverImage: string;
+  coverAlt: string;
+  coverPosition?: string;
   datePublished: string;
   dateModified: string;
   faqs: Faq[];
@@ -38,6 +41,9 @@ export const HOW_LONG: BlogPost = {
     "Eyelash extensions last one full growth cycle — about two to three weeks looking full — before a fill. Here is what changes that, and why they shed.",
   excerpt:
     "A full set stays full for two to three weeks. What decides whether it is closer to two or closer to four.",
+  coverImage: "/images/results/v2/hero-client-enhanced.webp",
+  coverAlt: "Close-up of a finished eyelash extension set in Burnaby",
+  coverPosition: "object-[52%_48%]",
   datePublished: "2026-07-10",
   dateModified: "2026-07-10",
   faqs: [
@@ -73,6 +79,8 @@ export const COMPARE: BlogPost = {
     "Classic, hybrid and volume lashes differ in one thing: density. A Burnaby lash artist explains which set suits which lash line, and how to choose.",
   excerpt:
     "The three sets differ in one thing — density. Which one suits your lash line, and how to decide.",
+  coverImage: "/images/styles/v2/hybrid.webp",
+  coverAlt: "Hybrid eyelash extensions showing a balance of singles and light fans",
   datePublished: "2026-07-10",
   dateModified: "2026-07-10",
   faqs: [
@@ -109,6 +117,8 @@ export const AFTERCARE: BlogPost = {
     "How to make an eyelash extension set last: the first 24 hours, cleansing, sleeping, and the habits that quietly shorten a set. From a Burnaby studio.",
   excerpt:
     "The first day matters most, and so does cleansing. The habits that make a set last, and the ones that quietly kill it.",
+  coverImage: "/images/editorial/aftercare-still-life-v1.webp",
+  coverAlt: "Lash cleanser, spoolie brush and lint-free pad for eyelash extension aftercare",
   datePublished: "2026-07-10",
   dateModified: "2026-07-10",
   faqs: [
@@ -143,6 +153,9 @@ export const SAFE: BlogPost = {
     "Are eyelash extensions safe? An honest look at what can go wrong — allergy, damage, infection — and what prevents each. From a Burnaby lash artist.",
   excerpt:
     "An honest look at the three things that can go wrong — allergy, damage, infection — and what actually prevents each.",
+  coverImage: "/images/results/v2/beam-application-enhanced.webp",
+  coverAlt: "Close-up of a white LED eyelash extension application",
+  coverPosition: "object-[52%_42%]",
   datePublished: "2026-07-10",
   dateModified: "2026-07-10",
   faqs: [

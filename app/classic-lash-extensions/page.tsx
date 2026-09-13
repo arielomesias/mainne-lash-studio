@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PricingTable } from "@/components/PricingTable";
 import { ProvisionalPricingNotice } from "@/components/ProvisionalPricingNotice";
 import { ServiceCrossLinks } from "@/components/service/ServiceCrossLinks";
+import { ServiceGallery } from "@/components/service/ServiceGallery";
 import { ServiceHero } from "@/components/service/ServiceHero";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SITE_URL } from "@/data/business";
@@ -43,6 +44,9 @@ export default function ClassicPage() {
 
       <ServiceHero
         title="Classic Lash Extensions"
+        imageSrc="/images/styles/v2/classic-1x1.webp"
+        imageAlt="Close-up of natural classic lash extensions in Burnaby"
+        badge="One extension per natural lash"
         lede={
           <p>
             One extension, bonded to one natural lash, repeated across the lash
@@ -103,7 +107,8 @@ export default function ClassicPage() {
         <ProvisionalPricingNotice />
       </Section>
 
-      <FaqSection faqs={CLASSIC_FAQS} tone="cream" />
+      <ServiceGallery currentSlug={CLASSIC.slug} />
+      <FaqSection faqs={CLASSIC_FAQS} />
       <ServiceCrossLinks currentSlug={CLASSIC.slug} />
     </>
   );

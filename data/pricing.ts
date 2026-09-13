@@ -53,7 +53,10 @@ export const CLASSIC: ServicePricing = {
   description:
     "One extension placed on each of your natural lashes. It adds length and a soft, defined line — the look of good mascara you never have to take off. If you have never worn extensions, this is the gentlest place to start.",
   fromPrice: 95,
-  image: null,
+  image: {
+    src: "/images/styles/v2/classic-1x1.webp",
+    alt: "Classic lash extensions with clean one-to-one definition",
+  },
   rows: [
     { service: "Half set", price: 95, priceLabel: "$95", duration: "1h 25m" },
     { service: "Half set fill", price: 65, priceLabel: "$65", duration: "1h" },
@@ -70,7 +73,10 @@ export const HYBRID: ServicePricing = {
   description:
     "Single classic lashes and lightweight handmade fans mixed across the lash line. It fills gaps and adds a little texture and depth, without the full density of a volume set — a middle ground that flatters most eyes.",
   fromPrice: 110,
-  image: null,
+  image: {
+    src: "/images/styles/v2/hybrid.webp",
+    alt: "Hybrid lash extensions mixing singles and light fans",
+  },
   rows: [
     { service: "Half set (YY 2D)", price: 110, priceLabel: "$110", duration: "1h 15m" },
     { service: "Half set fill", price: 75, priceLabel: "$75", duration: "45m" },
@@ -85,9 +91,12 @@ export const VOLUME: ServicePricing = {
   href: "/volume-lash-extensions/",
   tagline: "Lightweight handmade fans for a full, dramatic set.",
   description:
-    "Fine, handmade fans fanned onto each natural lash, from a soft, airy volume up to a dense mega set. The fuller looks use more lashes per fan, so they take a little longer to apply and to map to your eye shape.",
+    "Fine, handmade fans placed onto each natural lash, from a soft, airy volume up to a dense mega set. Fuller looks use more ultra-fine lashes per fan for a deeper, more dramatic finish mapped to your eye shape.",
   fromPrice: 125,
-  image: null,
+  image: {
+    src: "/images/styles/v2/volume-6d.webp",
+    alt: "Full volume eyelash extensions with soft handmade fans",
+  },
   rows: [
     { service: "W 4D — Half set", price: 125, priceLabel: "$125", duration: "1h 30m" },
     { service: "W 4D — Full set", price: 145, priceLabel: "$145", duration: "2h" },

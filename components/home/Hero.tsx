@@ -72,8 +72,8 @@ export function Hero() {
             <p className="eyebrow">White LED lash extensions · Burnaby</p>
 
             <h1 className="mt-5 max-w-[14ch] text-[clamp(3.15rem,6.5vw,6.35rem)] leading-[.9] tracking-[-.052em] text-ink">
-              Soft lashes.
-              <span className="block italic text-olive">Serious staying power.</span>
+              White LED lash extensions in Burnaby.
+              <span className="block italic text-olive">Modern precision, made to last.</span>
             </h1>
 
             <p className="mt-7 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">

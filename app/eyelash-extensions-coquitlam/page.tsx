@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { CitySetLinks } from "@/components/city/CitySetLinks";
+import { TransitRoute } from "@/components/city/TransitRoute";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { EditorialHero } from "@/components/ui/EditorialHero";
 import { FoxtailDivider } from "@/components/ui/FoxtailDivider";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -57,28 +59,24 @@ export default function CoquitlamPage() {
         ])}
       />
 
-      <div className="bg-bg pb-12 pt-12 sm:pb-16 sm:pt-16">
-        <Container>
-          <div className="max-w-prose">
-            <h1 className="text-3xl leading-tight text-ink sm:text-4xl lg:text-5xl">
-              Eyelash Extensions in Coquitlam
-            </h1>
-
-            <p className="mt-6 text-base text-muted sm:text-lg">
-              The studio sits at Lougheed, right where Burnaby stops being
-              Burnaby. For most of Coquitlam it is closer than the drive into
-              town, and it is a private room rather than a chair on a salon
-              floor.
-            </p>
-
-            <div className="mt-8">
-              <Button href="/book/">See prices &amp; book</Button>
-            </div>
-          </div>
-        </Container>
-      </div>
+      <EditorialHero
+        eyebrow="White LED lash extensions · Near Lougheed"
+        title={<>Eyelash Extensions in <span className="italic text-olive">Coquitlam</span></>}
+        description={
+          <p>
+            The studio sits at Lougheed, right where Burnaby meets Coquitlam.
+            It is a calm private appointment rather than a chair on a busy salon floor.
+          </p>
+        }
+        imageSrc="/images/styles/v2/foxy-effect.webp"
+        imageAlt="Foxy eyelash extensions for Coquitlam clients near Lougheed"
+        badge="Minutes from Burquitlam · private appointment"
+        secondaryLabel="Compare lash sets"
+        secondaryHref="#sets"
+      />
 
       <Section tone="cream" labelledBy="on-the-boundary">
+        <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-16">
         <div className="max-w-prose">
           <SectionHeading id="on-the-boundary">
             On the edge of your own city
@@ -100,6 +98,11 @@ export default function CoquitlamPage() {
               appointment feel much easier to fit into your day.
             </p>
           </div>
+        </div>
+        <TransitRoute
+          label="Millennium Line approach"
+          stops={["Coquitlam Central", "Lincoln", "Burquitlam", "Lougheed Town Centre", "Mainne · short walk"]}
+        />
         </div>
       </Section>
 

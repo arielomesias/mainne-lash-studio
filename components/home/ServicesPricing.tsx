@@ -27,9 +27,9 @@ export function ServicesPricing() {
       </SectionHeading>
 
       <p className="mt-4 max-w-prose text-muted">
-        Open a set to see what it includes — half and full sets, fills, prices
-        and how long each appointment takes. Every set is applied one lash at a
-        time in the private home studio.
+        Open a set to see what it includes — half and full sets, fills and
+        prices. Every look is mapped to the client and applied one lash at a
+        time in the private studio.
       </p>
 
       <div className="mt-10 space-y-4">
@@ -90,7 +90,7 @@ function ServiceRow({
           <div className="mt-5 overflow-x-auto">
             <table className="w-full min-w-[18rem] border-collapse text-left text-sm">
               <caption className="sr-only">
-                {service.name} prices and appointment durations
+                {service.name} prices
               </caption>
               <thead>
                 <tr className="border-b border-beige text-muted">
@@ -99,9 +99,6 @@ function ServiceRow({
                   </th>
                   <th scope="col" className="py-2 pr-4 font-medium">
                     Price
-                  </th>
-                  <th scope="col" className="py-2 font-medium">
-                    Duration
                   </th>
                 </tr>
               </thead>
@@ -116,9 +113,6 @@ function ServiceRow({
                     </th>
                     <td className="py-3 pr-4 whitespace-nowrap text-olive-dark">
                       {row.priceLabel}
-                    </td>
-                    <td className="py-3 whitespace-nowrap text-muted">
-                      {row.duration}
                     </td>
                   </tr>
                 ))}

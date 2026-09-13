@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PricingTable } from "@/components/PricingTable";
 import { ProvisionalPricingNotice } from "@/components/ProvisionalPricingNotice";
 import { ServiceCrossLinks } from "@/components/service/ServiceCrossLinks";
+import { ServiceGallery } from "@/components/service/ServiceGallery";
 import { ServiceHero } from "@/components/service/ServiceHero";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SITE_URL } from "@/data/business";
@@ -43,6 +44,9 @@ export default function HybridPage() {
 
       <ServiceHero
         title="Hybrid Lash Extensions"
+        imageSrc="/images/styles/v2/hybrid.webp"
+        imageAlt="Close-up of textured hybrid lash extensions in Burnaby"
+        badge="Classic definition + airy fans"
         lede={
           <p>
             Two techniques on the same lash line. Single extensions give the
@@ -100,10 +104,9 @@ export default function HybridPage() {
         <SectionHeading id="pricing">Hybrid pricing</SectionHeading>
 
         <p className="mt-4 max-w-prose text-muted">
-          A hybrid set takes longer than classic, because the fans are built by
-          hand during the appointment. It stays looking full further into the
-          shedding cycle, since the fans disguise the gap left by a lash that has
-          shed.
+          A hybrid set combines individual extensions with handmade fans for a
+          textured finish. It stays looking full further into the shedding
+          cycle, since the fans soften the gap left by a lash that has shed.
         </p>
 
         <div className="mt-8">
@@ -113,7 +116,8 @@ export default function HybridPage() {
         <ProvisionalPricingNotice />
       </Section>
 
-      <FaqSection faqs={HYBRID_FAQS} tone="cream" />
+      <ServiceGallery currentSlug={HYBRID.slug} />
+      <FaqSection faqs={HYBRID_FAQS} />
       <ServiceCrossLinks currentSlug={HYBRID.slug} />
     </>
   );

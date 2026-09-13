@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import { FaqSection } from "@/components/FaqSection";
 import { JsonLd } from "@/components/JsonLd";
 import { CitySetLinks } from "@/components/city/CitySetLinks";
+import { TransitRoute } from "@/components/city/TransitRoute";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { EditorialHero } from "@/components/ui/EditorialHero";
 import { FoxtailDivider } from "@/components/ui/FoxtailDivider";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -61,28 +63,25 @@ export default function NewWestminsterPage() {
         ])}
       />
 
-      <div className="bg-bg pb-12 pt-12 sm:pb-16 sm:pt-16">
-        <Container>
-          <div className="max-w-prose">
-            <h1 className="text-3xl leading-tight text-ink sm:text-4xl lg:text-5xl">
-              Eyelash Extensions in New Westminster
-            </h1>
-
-            <p className="mt-6 text-base text-muted sm:text-lg">
-              New Westminster has never been short of places to get your lashes
-              done. What it has fewer of is rooms where only one appointment is
-              happening at a time. The studio is a private one, a short train
-              ride up the hill, and it takes one client at a time.
-            </p>
-
-            <div className="mt-8">
-              <Button href="/book/">See prices &amp; book</Button>
-            </div>
-          </div>
-        </Container>
-      </div>
+      <EditorialHero
+        eyebrow="White LED lash extensions · Direct SkyTrain access"
+        title={<>Eyelash Extensions in <span className="italic text-olive">New Westminster</span></>}
+        description={
+          <p>
+            One client at a time in a private Burnaby studio, a straightforward
+            Expo Line ride from New Westminster, Columbia, Sapperton and Braid.
+          </p>
+        }
+        imageSrc="/images/styles/v2/aurora-4d.webp"
+        imageAlt="Textured eyelash extensions for New Westminster clients"
+        badge="Direct ride to Lougheed · one client at a time"
+        secondaryLabel="Compare lash sets"
+        secondaryHref="#sets"
+        imageLeft
+      />
 
       <Section tone="cream" labelledBy="getting-here">
+        <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-16">
         <div className="max-w-prose">
           <SectionHeading id="getting-here">
             The trip from New West
@@ -110,6 +109,11 @@ export default function NewWestminsterPage() {
               the return trip at five o&rsquo;clock.
             </p>
           </div>
+        </div>
+        <TransitRoute
+          label="Expo Line branch"
+          stops={["New Westminster", "Columbia", "Sapperton", "Braid", "Lougheed Town Centre", "Mainne · short walk"]}
+        />
         </div>
       </Section>
 

@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PricingTable } from "@/components/PricingTable";
 import { ProvisionalPricingNotice } from "@/components/ProvisionalPricingNotice";
 import { ServiceCrossLinks } from "@/components/service/ServiceCrossLinks";
+import { ServiceGallery } from "@/components/service/ServiceGallery";
 import { ServiceHero } from "@/components/service/ServiceHero";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { SITE_URL } from "@/data/business";
@@ -50,6 +51,9 @@ export default function VolumePage() {
 
       <ServiceHero
         title="Volume & Mega Volume Lash Extensions"
+        imageSrc="/images/styles/v2/volume-6d.webp"
+        imageAlt="Close-up of full volume lash extensions in Burnaby"
+        badge="Soft volume through statement density"
         lede={
           <p>
             Every natural lash carries a fan, not a single extension. The fans
@@ -137,6 +141,7 @@ export default function VolumePage() {
         <ProvisionalPricingNotice />
       </Section>
 
+      <ServiceGallery currentSlug={VOLUME.slug} />
       <FaqSection faqs={VOLUME_FAQS} />
       <ServiceCrossLinks currentSlug={VOLUME.slug} />
     </>
